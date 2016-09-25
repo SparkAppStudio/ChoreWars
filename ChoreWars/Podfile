@@ -9,5 +9,6 @@ target 'ChoreWars' do
 
   # Pods for ChoreWars
   pod 'Firebase'
+  pod 'Firebase/Database'
 
 end
