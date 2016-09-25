@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB4DA80A5D6D8DC323D88469 /* Pods_ChoreWars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF40639205411DC977A47C6 /* Pods_ChoreWars.framework */; };
+		C3E5A3531D9754B400CBF7C8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5A3521D9754B400CBF7C8 /* Network.swift */; };
+		C3FB0E821D97527A0099D844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB0E811D97527A0099D844 /* AppDelegate.swift */; };
+		C3FB0E841D97527A0099D844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB0E831D97527A0099D844 /* ViewController.swift */; };
+		C3FB0E871D97527A0099D844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FB0E851D97527A0099D844 /* Main.storyboard */; };
+		C3FB0E891D97527A0099D844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3FB0E881D97527A0099D844 /* Assets.xcassets */; };
+		C3FB0E8C1D97527A0099D844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FB0E8A1D97527A0099D844 /* LaunchScreen.storyboard */; };
+		C3FB0E941D9753FD0099D844 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3FB0E931D9753FD0099D844 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		46B173B20374700086BF0B66 /* Pods-ChoreWars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoreWars.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoreWars/Pods-ChoreWars.debug.xcconfig"; sourceTree = "<group>"; };
+		5BF40639205411DC977A47C6 /* Pods_ChoreWars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoreWars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3E5A3521D9754B400CBF7C8 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		C3FB0E7E1D97527A0099D844 /* ChoreWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoreWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3FB0E811D97527A0099D844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C3FB0E831D97527A0099D844 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3FB0E861D97527A0099D844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C3FB0E881D97527A0099D844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3FB0E8B1D97527A0099D844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3FB0E8D1D97527A0099D844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3FB0E931D9753FD0099D844 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E1F9C448E6137B7819F113E1 /* Pods-ChoreWars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoreWars.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoreWars/Pods-ChoreWars.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3FB0E7B1D97527A0099D844 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB4DA80A5D6D8DC323D88469 /* Pods_ChoreWars.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1350C8567C00487DBC4F96F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46B173B20374700086BF0B66 /* Pods-ChoreWars.debug.xcconfig */,
+				E1F9C448E6137B7819F113E1 /* Pods-ChoreWars.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A70E2A80AB6B16E832B992A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BF40639205411DC977A47C6 /* Pods_ChoreWars.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3FB0E751D97527A0099D844 = {
+			isa = PBXGroup;
+			children = (
+				C3FB0E801D97527A0099D844 /* ChoreWars */,
+				C3FB0E7F1D97527A0099D844 /* Products */,
+				1350C8567C00487DBC4F96F2 /* Pods */,
+				A70E2A80AB6B16E832B992A9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C3FB0E7F1D97527A0099D844 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3FB0E7E1D97527A0099D844 /* ChoreWars.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3FB0E801D97527A0099D844 /* ChoreWars */ = {
+			isa = PBXGroup;
+			children = (
+				C3FB0E811D97527A0099D844 /* AppDelegate.swift */,
+				C3E5A3521D9754B400CBF7C8 /* Network.swift */,
+				C3FB0E831D97527A0099D844 /* ViewController.swift */,
+				C3FB0E851D97527A0099D844 /* Main.storyboard */,
+				C3FB0E881D97527A0099D844 /* Assets.xcassets */,
+				C3FB0E8A1D97527A0099D844 /* LaunchScreen.storyboard */,
+				C3FB0E8D1D97527A0099D844 /* Info.plist */,
+				C3FB0E931D9753FD0099D844 /* GoogleService-Info.plist */,
+			);
+			path = ChoreWars;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3FB0E7D1D97527A0099D844 /* ChoreWars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3FB0E901D97527A0099D844 /* Build configuration list for PBXNativeTarget "ChoreWars" */;
+			buildPhases = (
+				D21D6217EA4614097504AA75 /* 📦 Check Pods Manifest.lock */,
+				C3FB0E7A1D97527A0099D844 /* Sources */,
+				C3FB0E7B1D97527A0099D844 /* Frameworks */,
+				C3FB0E7C1D97527A0099D844 /* Resources */,
+				20FF68565D761AE60F2D535B /* 📦 Embed Pods Frameworks */,
+				7D18CB1B77FE4F7806FB4887 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChoreWars;
+			productName = ChoreWars;
+			productReference = C3FB0E7E1D97527A0099D844 /* ChoreWars.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3FB0E761D97527A0099D844 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = madebydouglas;
+				TargetAttributes = {
+					C3FB0E7D1D97527A0099D844 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 68KS6FN57P;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C3FB0E791D97527A0099D844 /* Build configuration list for PBXProject "ChoreWars" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C3FB0E751D97527A0099D844;
+			productRefGroup = C3FB0E7F1D97527A0099D844 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3FB0E7D1D97527A0099D844 /* ChoreWars */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3FB0E7C1D97527A0099D844 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FB0E8C1D97527A0099D844 /* LaunchScreen.storyboard in Resources */,
+				C3FB0E941D9753FD0099D844 /* GoogleService-Info.plist in Resources */,
+				C3FB0E891D97527A0099D844 /* Assets.xcassets in Resources */,
+				C3FB0E871D97527A0099D844 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20FF68565D761AE60F2D535B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChoreWars/Pods-ChoreWars-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D18CB1B77FE4F7806FB4887 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChoreWars/Pods-ChoreWars-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D21D6217EA4614097504AA75 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3FB0E7A1D97527A0099D844 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FB0E841D97527A0099D844 /* ViewController.swift in Sources */,
+				C3FB0E821D97527A0099D844 /* AppDelegate.swift in Sources */,
+				C3E5A3531D9754B400CBF7C8 /* Network.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C3FB0E851D97527A0099D844 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3FB0E861D97527A0099D844 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C3FB0E8A1D97527A0099D844 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3FB0E8B1D97527A0099D844 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3FB0E8E1D97527A0099D844 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C3FB0E8F1D97527A0099D844 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3FB0E911D97527A0099D844 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46B173B20374700086BF0B66 /* Pods-ChoreWars.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 68KS6FN57P;
+				INFOPLIST_FILE = ChoreWars/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.madebydouglas.ChoreWars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C3FB0E921D97527A0099D844 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1F9C448E6137B7819F113E1 /* Pods-ChoreWars.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 68KS6FN57P;
+				INFOPLIST_FILE = ChoreWars/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.madebydouglas.ChoreWars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3FB0E791D97527A0099D844 /* Build configuration list for PBXProject "ChoreWars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3FB0E8E1D97527A0099D844 /* Debug */,
+				C3FB0E8F1D97527A0099D844 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3FB0E901D97527A0099D844 /* Build configuration list for PBXNativeTarget "ChoreWars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3FB0E911D97527A0099D844 /* Debug */,
+				C3FB0E921D97527A0099D844 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3FB0E761D97527A0099D844 /* Project object */;
+}
