@@ -22,6 +22,7 @@ class Network: NSObject {
 
     class func start() {
         FIRApp.configure()
+        FIRDatabase.database().persistenceEnabled = true
     }
     
     let rootRef = FIRDatabase.database().reference()

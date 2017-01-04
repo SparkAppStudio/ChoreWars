@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RoommatesTableViewController: UITableViewController {
 
@@ -15,7 +16,20 @@ class RoommatesTableViewController: UITableViewController {
 
         let addBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
         self.navigationItem.rightBarButtonItem = addBarButton
-
+        observeMyChores()
+    }
+    
+    func observeMyChores() {
+        Network.sharedInstance.householdsRef.child(Network.sharedInstance.myHouseholdRef).child(Network.Reference.Chores.rawValue).observe(.value, with: { (snapshot) in
+            var chores = [Chore]()
+            for item in snapshot.children {
+                let dataSnapshot = item as! FIRDataSnapshot
+                let aChore = Chore(ref: dataSnapshot.key, name: "blah")
+                chores.append(aChore)
+            }
+            DataManager.sharedInstance.myChores = chores
+            self.tableView.reloadData()
+        })
     }
     
     func didTapAdd() {
@@ -25,24 +39,23 @@ class RoommatesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return DataManager.sharedInstance.myChores.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "roommateTableViewCell", for: indexPath)
 
         // Configure the cell...
-
+        cell.textLabel?.text = DataManager.sharedInstance.myChores[indexPath.row].name
+        cell.detailTextLabel?.text = DataManager.sharedInstance.myChores[indexPath.row].ref
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

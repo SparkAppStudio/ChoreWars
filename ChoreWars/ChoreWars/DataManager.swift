@@ -12,17 +12,20 @@ class DataManager: NSObject {
     static let sharedInstance = DataManager()
     
     func createNewChore() {
-        let newChore = Chore(ref: "uniqueID")
+        let newChore = Chore(ref: Date().description, name: "blah")
         Network.sharedInstance.saveChore(chore: newChore)
     }
+    
+    var myChores = [Chore]()
 
 }
 
 struct Chore {
     let ref: String
+    let name: String
 
     func toDictionary() -> NSDictionary {
-        return ["ref":self.ref]
+        return ["ref":self.ref, "name":self.name]
     }
 }
 
