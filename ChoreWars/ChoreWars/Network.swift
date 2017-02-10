@@ -30,7 +30,7 @@ class Network: NSObject {
     let myHouseholdRef = "currentUserHouseholdID"
     
     func saveChore(chore: Chore) {
-        let choreRef = householdsRef.child(myHouseholdRef).child(Reference.Chores.rawValue).child(chore.ref)
+        let choreRef = householdsRef.child(myHouseholdRef).child(Reference.Chores.rawValue).child(chore.key)
         choreRef.setValue(chore.toDictionary())
     }
 }

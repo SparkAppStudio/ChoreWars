@@ -24,7 +24,7 @@ class RoommatesTableViewController: UITableViewController {
             var chores = [Chore]()
             for item in snapshot.children {
                 let dataSnapshot = item as! FIRDataSnapshot
-                let aChore = Chore(ref: dataSnapshot.key, name: "blah")
+                let aChore = Chore(snapshot: dataSnapshot)
                 chores.append(aChore)
             }
             DataManager.sharedInstance.myChores = chores
@@ -33,7 +33,7 @@ class RoommatesTableViewController: UITableViewController {
     }
     
     func didTapAdd() {
-        DataManager.sharedInstance.createNewChore()
+        DataManager.sharedInstance.createNewChore(name: "newChore", key: Date().description)
     }
 
     // MARK: - Table view data source
@@ -52,7 +52,7 @@ class RoommatesTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.textLabel?.text = DataManager.sharedInstance.myChores[indexPath.row].name
-        cell.detailTextLabel?.text = DataManager.sharedInstance.myChores[indexPath.row].ref
+        cell.detailTextLabel?.text = DataManager.sharedInstance.myChores[indexPath.row].key
         return cell
     }
     
@@ -65,17 +65,20 @@ class RoommatesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            let item = DataManager.sharedInstance.myChores[indexPath.row]
+            item.ref?.removeValue()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

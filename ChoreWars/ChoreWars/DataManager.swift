@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class DataManager: NSObject {
     static let sharedInstance = DataManager()
     
-    func createNewChore() {
-        let newChore = Chore(ref: Date().description, name: "blah")
+    func createNewChore(name: String, key: String) {
+        let newChore = Chore(name: name, key: key)
         Network.sharedInstance.saveChore(chore: newChore)
     }
     
@@ -20,12 +21,39 @@ class DataManager: NSObject {
 
 }
 
-struct Chore {
-    let ref: String
+struct Chore: Firebase {
+    
+    
+    //MARK: - firebase chore data
+    
+    internal var ref: FIRDatabaseReference?
+    internal var key: String
+    
+    init(snapshot: FIRDataSnapshot) {
+        key = snapshot.key
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        name = snapshotValue["name"] as! String
+        
+        ref = snapshot.ref
+        
+        print("snapshot key: \(snapshot.key)")
+        print("reference key: \(snapshot.ref.key)")
+    }
+    
+    
+    //MARK: - general chore data
+    
     let name: String
 
+    init(name: String, key: String) {
+        self.key = key
+        self.ref = nil
+        
+        self.name = name
+    }
+    
     func toDictionary() -> NSDictionary {
-        return ["ref":self.ref, "name":self.name]
+        return ["name":self.name]
     }
 }
 
@@ -46,6 +74,8 @@ struct Team {
 }
 
 protocol Firebase {
-    var ref: String { get }
-    
+    var ref: FIRDatabaseReference? { get }
+    var key: String { get }
+
+    init(snapshot: FIRDataSnapshot)
 }
