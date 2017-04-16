@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FEd-dH-FQf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FEd-dH-FQf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Roommates Table View Controller-->
+        <!--Chores Table View Controller-->
         <scene sceneID="cxy-2D-liA">
             <objects>
-                <tableViewController id="Ey2-eb-WKs" customClass="RoommatesTableViewController" customModule="ChoreWars" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Ey2-eb-WKs" customClass="ChoresTableViewController" customModule="ChoreWars" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Av1-hW-YIb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="roommateTableViewCell" textLabel="qa6-CM-7n1" detailTextLabel="Mh5-GS-K1V" style="IBUITableViewCellStyleSubtitle" id="bzY-mR-7AC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChoreCell" textLabel="qa6-CM-7n1" detailTextLabel="Mh5-GS-K1V" style="IBUITableViewCellStyleSubtitle" id="bzY-mR-7AC">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bzY-mR-7AC" id="urv-mB-8M8">
@@ -52,7 +53,97 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWL-T2-xUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992.79999999999995" y="116.49175412293854"/>
+            <point key="canvasLocation" x="1839" y="79"/>
+        </scene>
+        <!--Roommates Collection View Controller-->
+        <scene sceneID="qv5-RS-hXG">
+            <objects>
+                <collectionViewController storyboardIdentifier="RoommatesCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ocZ-xb-HMd" customClass="RoommatesCollectionViewController" customModule="ChoreWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="x1Y-8f-SOO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TYx-Dy-nGT">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RoommateCell" id="Xvg-Y8-bCh" customClass="RoommateCollectionViewCell" customModule="ChoreWars" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ocZ-xb-HMd" id="CPL-2G-dlA"/>
+                            <outlet property="delegate" destination="ocZ-xb-HMd" id="AgY-1Q-Wa7"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQ4-HI-Vfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="803"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="CFa-d5-1l8">
+            <objects>
+                <viewController id="Ta7-gJ-sv8" customClass="HomeViewController" customModule="ChoreWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gv4-sV-ncI"/>
+                        <viewControllerLayoutGuide type="bottom" id="In1-G5-bkQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9xf-Ou-XaD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EU2-uH-LCd">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFS-aO-Yoo">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="301.5"/>
+                                        <state key="normal" title="Create Home"/>
+                                        <connections>
+                                            <action selector="didTapCreateHome:" destination="Ta7-gJ-sv8" eventType="touchUpInside" id="fJP-iy-0hx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGg-VM-vei">
+                                        <rect key="frame" x="0.0" y="301.5" width="343" height="301.5"/>
+                                        <state key="normal" title="Join Home"/>
+                                        <connections>
+                                            <action selector="didTapJoinHome:" destination="Ta7-gJ-sv8" eventType="touchUpInside" id="Q2a-6i-7Dv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="EU2-uH-LCd" secondAttribute="trailing" id="Jwh-Ki-9g3"/>
+                            <constraint firstItem="EU2-uH-LCd" firstAttribute="leading" secondItem="9xf-Ou-XaD" secondAttribute="leadingMargin" id="Vyg-co-Tmd"/>
+                            <constraint firstItem="In1-G5-bkQ" firstAttribute="top" secondItem="EU2-uH-LCd" secondAttribute="bottom" id="fKG-at-bly"/>
+                            <constraint firstItem="EU2-uH-LCd" firstAttribute="top" secondItem="gv4-sV-ncI" secondAttribute="bottom" id="gQY-w2-nNP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hgU-90-MY2">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="gDX-mh-PC1">
+                            <connections>
+                                <action selector="didTapLogout:" destination="Ta7-gJ-sv8" id="Ku7-Xg-mcn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="createHomeButton" destination="XFS-aO-Yoo" id="kOj-FT-NfD"/>
+                        <outlet property="joinHomeButton" destination="rGg-VM-vei" id="gPn-oy-lmm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEe-Np-Luu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="acH-Xn-q5w">
@@ -65,7 +156,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ey2-eb-WKs" kind="relationship" relationship="rootViewController" id="8ta-zU-fiS"/>
+                        <segue destination="Ta7-gJ-sv8" kind="relationship" relationship="rootViewController" id="171-oy-gYc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Suq-78-ZoA" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -18,6 +18,7 @@ class DataManager: NSObject {
     }
     
     var myChores = [Chore]()
+    var myRoommates = [Roommate]()
 
 }
 

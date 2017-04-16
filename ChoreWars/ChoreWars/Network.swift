@@ -25,6 +25,10 @@ class Network: NSObject {
         FIRDatabase.database().persistenceEnabled = true
     }
     
+    class func logout() {
+        
+    }
+    
     let rootRef = FIRDatabase.database().reference()
     let householdsRef = FIRDatabase.database().reference().child(Reference.Households.rawValue)
     let myHouseholdRef = "currentUserHouseholdID"

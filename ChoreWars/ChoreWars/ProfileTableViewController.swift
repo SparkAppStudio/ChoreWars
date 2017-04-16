@@ -1,39 +1,46 @@
 //
-//  RoommatesTableViewController.swift
+//  ProfileTableViewController.swift
 //  ChoreWars
 //
-//  Created by Douglas Hewitt on 9/24/16.
-//  Copyright © 2016 madebydouglas. All rights reserved.
+//  Created by Douglas Hewitt on 4/3/17.
+//  Copyright © 2017 madebydouglas. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
-class RoommatesTableViewController: UITableViewController {
+class ProfileTableViewController: UITableViewController {
 
+    var headerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let addBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
-        self.navigationItem.rightBarButtonItem = addBarButton
-        observeMyChores()
+
+        //header view
+        let nib = UINib(nibName: "ProfileHeader", bundle: nil)
+        headerView = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        
+        headerView.heightAnchor.constraint(equalToConstant: CellHeight.superWide.value)
+        
+        let containerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: CellHeight.superWide.value))
+        
+        containerView.addSubview(headerView)
+        
+        tableView.tableHeaderView = containerView
+        
+        headerView.leadingAnchor.constraint(equalTo: tableView.tableHeaderView!.leadingAnchor).isActive = true
+        headerView.trailingAnchor.constraint(equalTo: tableView.tableHeaderView!.trailingAnchor).isActive = true
+        headerView.bottomAnchor.constraint(equalTo: tableView.tableHeaderView!.bottomAnchor).isActive = true
+        headerView.topAnchor.constraint(equalTo: tableView.tableHeaderView!.topAnchor).isActive = true
+        
+        self.tableView.backgroundColor = UIColor.white
+        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
     }
-    
-    func observeMyChores() {
-        Network.sharedInstance.householdsRef.child(Network.sharedInstance.myHouseholdRef).child(Network.Reference.Chores.rawValue).observe(.value, with: { (snapshot) in
-            var chores = [Chore]()
-            for item in snapshot.children {
-                let dataSnapshot = item as! FIRDataSnapshot
-                let aChore = Chore(snapshot: dataSnapshot)
-                chores.append(aChore)
-            }
-            DataManager.sharedInstance.myChores = chores
-            self.tableView.reloadData()
-        })
-    }
-    
-    func didTapAdd() {
-        DataManager.sharedInstance.createNewChore(name: "newChore", key: Date().description)
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -43,20 +50,23 @@ class RoommatesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataManager.sharedInstance.myChores.count
+        return 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "roommateTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = DataManager.sharedInstance.myChores[indexPath.row].name
-        cell.detailTextLabel?.text = DataManager.sharedInstance.myChores[indexPath.row].key
+        cell.textLabel?.text = "Chores"
         return cell
     }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let choresVC = ChoresTableViewController()
+        navigationController?.pushViewController(choresVC, animated: true)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -65,20 +75,17 @@ class RoommatesTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-
             // Delete the row from the data source
-            let item = DataManager.sharedInstance.myChores[indexPath.row]
-            item.ref?.removeValue()
+            tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.

@@ -8,10 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		BB4DA80A5D6D8DC323D88469 /* Pods_ChoreWars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF40639205411DC977A47C6 /* Pods_ChoreWars.framework */; };
+		C38F625D1E92AAB400C7ABC4 /* RoommateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38F625C1E92AAB400C7ABC4 /* RoommateCell.xib */; };
+		C38F625F1E92ABC400C7ABC4 /* RoommateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F625E1E92ABC400C7ABC4 /* RoommateCollectionViewCell.swift */; };
+		C38F62611E92D8FE00C7ABC4 /* FooterButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38F62601E92D8FE00C7ABC4 /* FooterButton.xib */; };
+		C38F62631E92DE1000C7ABC4 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F62621E92DE1000C7ABC4 /* ProfileTableViewController.swift */; };
+		C38F62651E92E5D100C7ABC4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F62641E92E5D100C7ABC4 /* Extensions.swift */; };
+		C38F62671E92E99400C7ABC4 /* ProfileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38F62661E92E99400C7ABC4 /* ProfileHeader.xib */; };
 		C39160D01DDED13400D255DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39160CF1DDED13400D255DA /* GoogleService-Info.plist */; };
+		C3A22F401EA2ECD3001EE8BF /* SelectionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A22F3F1EA2ECD3001EE8BF /* SelectionLayer.swift */; };
+		C3A22F421EA2F300001EE8BF /* GlobalEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A22F411EA2F300001EE8BF /* GlobalEnums.swift */; };
+		C3B5C6091E67AD8200D48C66 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B5C6081E67AD8200D48C66 /* HomeViewController.swift */; };
+		C3B5C60F1E67AFFF00D48C66 /* RoommatesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B5C60E1E67AFFF00D48C66 /* RoommatesCollectionViewController.swift */; };
 		C3E5A3531D9754B400CBF7C8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5A3521D9754B400CBF7C8 /* Network.swift */; };
 		C3E5A3551D975CB600CBF7C8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5A3541D975CB600CBF7C8 /* DataManager.swift */; };
-		C3E5A3571D975E6600CBF7C8 /* RoommatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5A3561D975E6600CBF7C8 /* RoommatesTableViewController.swift */; };
+		C3E5A3571D975E6600CBF7C8 /* ChoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5A3561D975E6600CBF7C8 /* ChoresTableViewController.swift */; };
 		C3FB0E821D97527A0099D844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB0E811D97527A0099D844 /* AppDelegate.swift */; };
 		C3FB0E871D97527A0099D844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FB0E851D97527A0099D844 /* Main.storyboard */; };
 		C3FB0E891D97527A0099D844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3FB0E881D97527A0099D844 /* Assets.xcassets */; };
@@ -21,11 +31,21 @@
 /* Begin PBXFileReference section */
 		46B173B20374700086BF0B66 /* Pods-ChoreWars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoreWars.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoreWars/Pods-ChoreWars.debug.xcconfig"; sourceTree = "<group>"; };
 		5BF40639205411DC977A47C6 /* Pods_ChoreWars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoreWars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C38F625C1E92AAB400C7ABC4 /* RoommateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoommateCell.xib; sourceTree = "<group>"; };
+		C38F625E1E92ABC400C7ABC4 /* RoommateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoommateCollectionViewCell.swift; sourceTree = "<group>"; };
+		C38F62601E92D8FE00C7ABC4 /* FooterButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterButton.xib; sourceTree = "<group>"; };
+		C38F62621E92DE1000C7ABC4 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		C38F62641E92E5D100C7ABC4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C38F62661E92E99400C7ABC4 /* ProfileHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeader.xib; sourceTree = "<group>"; };
 		C39160CF1DDED13400D255DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C39160D11DDED1B400D255DA /* ChoreWars.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChoreWars.entitlements; sourceTree = "<group>"; };
+		C3A22F3F1EA2ECD3001EE8BF /* SelectionLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionLayer.swift; sourceTree = "<group>"; };
+		C3A22F411EA2F300001EE8BF /* GlobalEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalEnums.swift; sourceTree = "<group>"; };
+		C3B5C6081E67AD8200D48C66 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C3B5C60E1E67AFFF00D48C66 /* RoommatesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoommatesCollectionViewController.swift; sourceTree = "<group>"; };
 		C3E5A3521D9754B400CBF7C8 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C3E5A3541D975CB600CBF7C8 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		C3E5A3561D975E6600CBF7C8 /* RoommatesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoommatesTableViewController.swift; sourceTree = "<group>"; };
+		C3E5A3561D975E6600CBF7C8 /* ChoresTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoresTableViewController.swift; sourceTree = "<group>"; };
 		C3FB0E7E1D97527A0099D844 /* ChoreWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoreWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3FB0E811D97527A0099D844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3FB0E861D97527A0099D844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +84,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C3A22F431EA2F451001EE8BF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C3A22F3F1EA2ECD3001EE8BF /* SelectionLayer.swift */,
+				C3FB0E811D97527A0099D844 /* AppDelegate.swift */,
+				C3E5A3521D9754B400CBF7C8 /* Network.swift */,
+				C3A22F411EA2F300001EE8BF /* GlobalEnums.swift */,
+				C38F62641E92E5D100C7ABC4 /* Extensions.swift */,
+				C3E5A3541D975CB600CBF7C8 /* DataManager.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		C3A22F441EA2F49F001EE8BF /* Home Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C38F62601E92D8FE00C7ABC4 /* FooterButton.xib */,
+				C3B5C60E1E67AFFF00D48C66 /* RoommatesCollectionViewController.swift */,
+				C38F625C1E92AAB400C7ABC4 /* RoommateCell.xib */,
+				C38F625E1E92ABC400C7ABC4 /* RoommateCollectionViewCell.swift */,
+				C3B5C6081E67AD8200D48C66 /* HomeViewController.swift */,
+			);
+			name = "Home Scene";
+			sourceTree = "<group>";
+		};
+		C3A22F451EA2F4CB001EE8BF /* Profile Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C38F62661E92E99400C7ABC4 /* ProfileHeader.xib */,
+				C38F62621E92DE1000C7ABC4 /* ProfileTableViewController.swift */,
+			);
+			name = "Profile Scene";
+			sourceTree = "<group>";
+		};
+		C3A22F461EA2F4D2001EE8BF /* Chores Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C3E5A3561D975E6600CBF7C8 /* ChoresTableViewController.swift */,
+			);
+			name = "Chores Scene";
+			sourceTree = "<group>";
+		};
 		C3FB0E751D97527A0099D844 = {
 			isa = PBXGroup;
 			children = (
@@ -86,10 +148,10 @@
 			isa = PBXGroup;
 			children = (
 				C39160D11DDED1B400D255DA /* ChoreWars.entitlements */,
-				C3FB0E811D97527A0099D844 /* AppDelegate.swift */,
-				C3E5A3521D9754B400CBF7C8 /* Network.swift */,
-				C3E5A3561D975E6600CBF7C8 /* RoommatesTableViewController.swift */,
-				C3E5A3541D975CB600CBF7C8 /* DataManager.swift */,
+				C3A22F431EA2F451001EE8BF /* Core */,
+				C3A22F441EA2F49F001EE8BF /* Home Scene */,
+				C3A22F451EA2F4CB001EE8BF /* Profile Scene */,
+				C3A22F461EA2F4D2001EE8BF /* Chores Scene */,
 				C3FB0E851D97527A0099D844 /* Main.storyboard */,
 				C3FB0E881D97527A0099D844 /* Assets.xcassets */,
 				C3FB0E8A1D97527A0099D844 /* LaunchScreen.storyboard */,
@@ -170,6 +232,9 @@
 				C3FB0E8C1D97527A0099D844 /* LaunchScreen.storyboard in Resources */,
 				C39160D01DDED13400D255DA /* GoogleService-Info.plist in Resources */,
 				C3FB0E891D97527A0099D844 /* Assets.xcassets in Resources */,
+				C38F62671E92E99400C7ABC4 /* ProfileHeader.xib in Resources */,
+				C38F625D1E92AAB400C7ABC4 /* RoommateCell.xib in Resources */,
+				C38F62611E92D8FE00C7ABC4 /* FooterButton.xib in Resources */,
 				C3FB0E871D97527A0099D844 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,10 +294,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3E5A3571D975E6600CBF7C8 /* RoommatesTableViewController.swift in Sources */,
+				C3A22F401EA2ECD3001EE8BF /* SelectionLayer.swift in Sources */,
+				C3B5C6091E67AD8200D48C66 /* HomeViewController.swift in Sources */,
+				C38F62651E92E5D100C7ABC4 /* Extensions.swift in Sources */,
+				C3E5A3571D975E6600CBF7C8 /* ChoresTableViewController.swift in Sources */,
+				C3B5C60F1E67AFFF00D48C66 /* RoommatesCollectionViewController.swift in Sources */,
+				C38F625F1E92ABC400C7ABC4 /* RoommateCollectionViewCell.swift in Sources */,
 				C3FB0E821D97527A0099D844 /* AppDelegate.swift in Sources */,
 				C3E5A3531D9754B400CBF7C8 /* Network.swift in Sources */,
+				C38F62631E92DE1000C7ABC4 /* ProfileTableViewController.swift in Sources */,
 				C3E5A3551D975CB600CBF7C8 /* DataManager.swift in Sources */,
+				C3A22F421EA2F300001EE8BF /* GlobalEnums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
